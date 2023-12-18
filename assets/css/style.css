@@ -1,0 +1,112 @@
+section{
+    height: 100vh;
+    background-image: url(../img/bg.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.img{
+    width: 25%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+.building{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.boom{
+    position: absolute;
+    z-index: 4;
+    width: 0;
+    top: 55%;
+    left: 63%;
+    transform: translate(-45%, -37%);
+    animation-name: boom;
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    animation-delay: 4.3s;
+    animation-iteration-count: 1;
+}
+@keyframes boom {
+    0% {width: 0;}
+    20% {width: 40px;}
+    40% {width: 80px;}
+    60% {width: 120px;}
+    80% {width: 160px;}
+    100% {width: 200px;}
+}
+.fighter{
+    position: absolute;
+    z-index: 4;
+    width: 150px;
+    top: 50%;
+    right: -20%;
+    transform: rotateX(40deg) rotate(0);
+    animation-name: fighter;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fighter {
+    0%{right: -20%; transform: rotateX(40deg) rotate(0);}
+    10%{right: 0%; transform: rotateX(25deg) rotate(0);}
+    20%{right: 20%; transform: rotateX(0deg) rotate(0);}
+    30%{right: 40%; transform: rotateX(35deg) rotate(0);}
+    40%{right: 56%; transform: rotateX(20deg) rotate(0);}
+    48%{right: 67%; transform: rotateX(10deg) rotate(0);}
+    50%{right: 68%; transform: rotateX(0deg) rotate(-90deg);}
+    60%{right: 68%; top: 60%; transform: rotateX(0deg) rotate(-90deg);}
+    70%{right: 68%; top: 70%; transform: rotateX(0deg) rotate(-90deg);}
+    80%{right: 68%; top: 80%; transform: rotateX(0deg) rotate(-90deg);}
+    90%{right: 68%; top: 88%; transform: rotateX(0deg) rotate(-30deg);}
+    100%{right: 68%; top: 90%; transform: rotateX(60deg) rotate(0deg);}
+}
+.flame{
+    width: 100px;
+    opacity: 0;
+    position: absolute;
+    bottom: -4%;
+    left: 26%;
+    transform: translate(-26%, -4%);
+    z-index: 9;
+    animation-name: flame;
+    animation-duration: 3s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+@keyframes flame {
+    0%{opacity: 0;}
+    20%{opacity: 0.2;}
+    40%{opacity: 0.4;}
+    60%{opacity: 0.6;}
+    80%{opacity: 0.8;}
+    100%{opacity: 1;}
+}
+.smoke{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation-name: smoke;
+    animation-duration: 5s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes smoke {
+    0%{opacity: 0;}
+    20%{opacity: 0.2;}
+    40%{opacity: 0.4;}
+    60%{opacity: 0.6;}
+    80%{opacity: 0.8;}
+    100%{opacity: 1;}
+}
